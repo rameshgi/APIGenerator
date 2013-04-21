@@ -1,0 +1,168 @@
+<TLVCodeGen>
+	<PDUDef>
+		<Name> OAMPDU </Name>
+		<Field>
+			<Position>	1 	</Position>
+			<FieldName>	Destination Address </FieldName>
+			<Type>		String	</Type>
+			<Length>	6	</Length>
+		</Field>
+
+		<Field>
+			<Position>	2 	</Position>
+			<FieldName>	Source Address </FieldName>
+			<Type>		String	</Type>
+			<Length>	6	</Length>
+		</Field>
+
+		<Field>
+			<Position>	3 	</Position>
+			<FieldName>	Length/Type </FieldName>
+			<Type>		Byte	</Type>
+			<Length>	2	</Length>
+			<DefVal>	0x8809	</DefVal>	
+		</Field>
+
+
+		<Field>
+			<Position>	4 	</Position>
+			<FieldName>	SubType </FieldName>
+			<Type>		Byte	</Type>
+			<Length>	1	</Length>
+			<DefVal>	0x03	</DefVal>
+		</Field>
+
+		<Field>
+			<Position>	5 	</Position>
+			<FieldName>	Flags </FieldName>
+			<Type>		Byte	</Type>
+			<Length>	2	</Length>
+		</Field>
+
+		<Field>
+			<Position>	6 	</Position>
+			<FieldName>	Code </FieldName>
+			<Type>		Byte	</Type>
+			<Length>	1	</Length>
+		</Field>
+
+		<Field>
+			<Position>	7 	</Position>
+			<FieldName>	Payload </FieldName>
+			<Type>		Var	</Type>
+			<!-- Implement min and max functionalities -->
+			<Length>	Var	</Length>
+			<MinLength>     42      </MinLength>
+			<MaxLength>     1496    </MaxLength>
+		</Field>
+
+		<Field>
+			<Position>	8 	</Position>
+			<FieldName>	FCS	</FieldName>
+			<Type>		Byte	</Type>
+			<Length>	4	</Length>
+		</Field>
+	</PDUDef>
+
+	<PDUDef>
+		<Name> Information TLV </Name>
+		<Field>
+			<Position>	1 	</Position>
+			<FieldName>	Information Type </FieldName>
+			<Length>	1	</Length>
+		</Field>
+
+		<Field>
+                        <Position>      2       </Position>
+			<FieldName>	Information Length </FieldName>
+			<Length>	1	</Length>
+		</Field>
+
+		<Field>
+                        <Position>      3       </Position>
+			<FieldName>	OAM Version </FieldName>
+			<Length>	1	</Length>
+		</Field>
+
+		<Field>
+                        <Position>      4       </Position>
+			<FieldName>	Revision </FieldName>
+			<Length>	2	</Length>
+		</Field>
+		<Field>
+                        <Position>      5       </Position>
+			<FieldName>	State </FieldName>
+			<Length>	1	</Length>
+		</Field>
+		<Field>
+                        <Position>      6       </Position>
+			<FieldName>	OAM Configuration </FieldName>
+			<Length>	1	</Length>
+		</Field>
+		<Field>
+                        <Position>      7       </Position>
+			<FieldName>	OAMPDU Configuration </FieldName>
+			<Length>	2	</Length>
+		</Field>
+		<Field>
+                        <Position>      8       </Position>
+			<FieldName>	OUI </FieldName>
+			<Length>	3	</Length>
+		</Field>
+
+		<Field>
+                        <Position>      9       </Position>
+			<FieldName>	Vendor Specific Info </FieldName>
+			<Length>	4	</Length>
+		</Field>
+	</PDUDef>
+
+	<PDUDef>
+        <Name> WIMAX MAC Frame </Name>
+		<Field>
+			<Position>	1 	</Position>
+			<FieldName>	HT      </FieldName>
+			<Length>	1	</Length>
+		</Field>
+		<Field>
+			<Position>	2 	</Position>
+			<FieldName>	EC      </FieldName>
+			<Length>	1	</Length>
+		</Field>
+		<Field>
+			<Position>	3	</Position>
+			<FieldName>	Type      </FieldName>
+			<Length>	6	</Length>
+		</Field>
+		<Field>
+			<Position>	4 	</Position>
+			<FieldName>	ESF      </FieldName>
+			<Length>	1	</Length>
+		</Field>
+		<Field>
+			<Position>	5 	</Position>
+			<FieldName>	CI      </FieldName>
+			<Length>	1	</Length>
+		</Field>
+		<Field>
+			<Position>	6 	</Position>
+			<FieldName>	EKS      </FieldName>
+			<Length>	1	</Length>
+		</Field>
+		<Field>
+			<Position>	7 	</Position>
+			<FieldName>	LEN      </FieldName>
+			<Length>	11	</Length>
+		</Field>
+		<Field>
+			<Position>	8 	</Position>
+			<FieldName>	CID      </FieldName>
+			<Length>	16	</Length>
+		</Field>
+		<Field>
+			<Position>	9 	</Position>
+			<FieldName>	HCS      </FieldName>
+			<Length>	8	</Length>
+		</Field>
+	</PDUDef>
+</TLVCodeGen>
